@@ -15,10 +15,14 @@ class majorityFinder(object):
         return: unique charset that appears most, None if list empty or a tie
     """
         count=Counter(arr)
+        #if arr is empty, return none
         if not count:
             return None
+        #find max value in list (# occurances)
         max_value = max(count.values()) 
+        #extract key associated with max_value
         parse_max = [key for key, value in count.items() if value == max_value]
+        #if there are multiple keys returned, there must be a tie, return none
         if len(parse_max) > 1:
             return None
         return(' '.join(parse_max))
