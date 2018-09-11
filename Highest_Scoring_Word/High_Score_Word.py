@@ -5,6 +5,7 @@ Each letter of a word scores points according to it's position in the alphabet: 
 
 You need to return the highest scoring word as a string.
 """
+import string
 
 def high(x):
 
