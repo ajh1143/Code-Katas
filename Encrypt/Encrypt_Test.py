@@ -1,0 +1,8 @@
+Test.describe('Basic Tests')
+Test.assert_equals(encrypt("This is a test!", 0), "This is a test!")
+Test.assert_equals(encrypt("This is a test!", 1), "hsi  etTi sats!")
+Test.assert_equals(encrypt("This is a test!", 2), "s eT ashi tist!")
+Test.assert_equals(encrypt("This is a test!", 3), " Tah itse sits!")
+Test.assert_equals(encrypt("This is a test!", 4), "This is a test!")
+Test.assert_equals(encrypt("This is a test!", -1), "This is a test!")
+Test.assert_equals(encrypt("This kata is very interesting!", 1), "hskt svr neetn!Ti aai eyitrsig")
