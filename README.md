@@ -1,4 +1,4 @@
-# Code-Katas
+# Code Katas: Code Wars!
 Solved, Remixed, and Test Driven Practice Challenges
 _______________________________________________________________________________________________________________________________________
 ## Encrypt
