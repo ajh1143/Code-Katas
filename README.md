@@ -2,6 +2,7 @@
 Solved, Remixed, and Test Driven Practice Challenges
 _______________________________________________________________________________________________________________________________________
 ## Encrypt
+```Python3
     """
     For building the encrypted string:
     Take every 2nd char from the string, then the other chars, that are not every 2nd char, and concat them as new String.
@@ -30,9 +31,9 @@ ________________________________________________________________________________
                         pass
                 text = seconds + leftovers
             return("".join(text))
-        
+   ```     
 ## Encrypt: Testing
-
+```Python3
     Test.describe('Basic Tests')
     Test.assert_equals(encrypt("This is a test!", 0), "This is a test!")
     Test.assert_equals(encrypt("This is a test!", 1), "hsi  etTi sats!")
@@ -41,10 +42,10 @@ ________________________________________________________________________________
     Test.assert_equals(encrypt("This is a test!", 4), "This is a test!")
     Test.assert_equals(encrypt("This is a test!", -1), "This is a test!")
     Test.assert_equals(encrypt("This kata is very interesting!", 1), "hskt svr neetn!Ti aai eyitrsig")
-
+```
 _______________________________________________________________________________________________________________________________________
 ## Highest Scoring Word
-
+```Python3
     """
     Given a string of words, you need to find the highest scoring word.
     Each letter of a word scores points according to it's position in the alphabet: a = 1, b = 2, c = 3 etc.
@@ -69,15 +70,16 @@ ________________________________________________________________________________
             word_score_list[each] = sum(temp_score_holder)
 
         return(max(word_score_list.keys(), key=(lambda key: word_score_list[key])))
-
+```
 ## Highest Scoring Word: Tests
-
+```Python3
     test.assert_equals(high('man i need a taxi up to ubud'), 'taxi')
     test.assert_equals(high('what time are we climbing up the volcano'), 'volcano')
     test.assert_equals(high('take me to semynak'), 'semynak')
-
+```
 _______________________________________________________________________________________________________________________________________
 ## Majority Occurance 
+```Python3
     """
     Given a list of elements [a1, a2, an], with each ai being a string, write a function majority that returns the value that 
     appears the most in the list. If there's no winner, the function should return None
@@ -106,8 +108,9 @@ ________________________________________________________________________________
         if len(parse_max) > 1:
             return None
         return(' '.join(parse_max))
-        
+```        
  ## Majority Occurance: Tests
+ ```Python3
       test.describe("Find the majority")
       test.it("Base fixed tests")
 
@@ -120,9 +123,10 @@ ________________________________________________________________________________
       test.assert_equals(majority(['A','A','A','BBBBBBBB']), "A")
       test.assert_equals(majority(["A", "B", "C", "C"]), "C")
       test.assert_equals(majority([]), None)
-      
+```      
 _______________________________________________________________________________________________________________________________________
 ## Shortest Words
+```Python3
     #Given a string, return the shortest word/words contained within
 
     def find_short(s):
@@ -132,18 +136,20 @@ ________________________________________________________________________________
             store.append(cur)
         low = min(store)
         return low
-        
+ ```       
 ## Shortest Words: Tests
+```Python3
     test.describe("Basic Tests")
     test.assert_equals(find_short("bitcoin take over the world maybe who knows perhaps"), 3)
     test.assert_equals(find_short("turns out random test cases are easier than writing out basic ones"), 3)
     test.assert_equals(find_short("lets talk about javascript the best language"), 3)
     test.assert_equals(find_short("i want to travel the world writing code one day"), 1)
     test.assert_equals(find_short("Lets all go on holiday somewhere very cold"), 2)
-    
+```
     
 _______________________________________________________________________________________________________________________________________
 ## Spin Words
+```Python3
     """
     Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed 
     (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than 
@@ -160,15 +166,17 @@ ________________________________________________________________________________
             else:
                 hold.append(each)
         return " ".join(hold)
-        
+```       
 ## Spin Words: Tests
+```Python3
     test.assert_equals(spin_words("Welcome"), "emocleW")
     test.assert_equals(spin_words( "Hey fellow warriors" ), "Hey wollef sroirraw") 
     test.assert_equals(spin_words( "This is a test"),  "This is a test" )
     test.assert_equals(spin_words( "This is another test"), "This is rehtona test")
-  
+```
 _______________________________________________________________________________________________________________________________________  
 ## Unique Orders
+```Python3
     """
     Implement the function unique_in_order which takes as argument a 
     sequence and returns a list of items without any elements with the same value next to each other and preserving the original order 
@@ -188,8 +196,10 @@ ________________________________________________________________________________
             else:
                 hold.append(cur)
         return hold
-        
+```        
 ## Unique Orders: Tests
+```Python3
     test.assert_equals(unique_in_order('AAAABBBCCDAABBB'), ['A','B','C','D','A','B'])
     test.assert_equals(unique_in_order('ABBCcAD'), ['A', 'B', 'C', 'c', 'A', 'D'])
     test.assert_equals(unique_in_order([1,2,2,3,3]), [1,2,3])
+```
