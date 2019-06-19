@@ -44,6 +44,35 @@ ________________________________________________________________________________
     Test.assert_equals(encrypt("This kata is very interesting!", 1), "hskt svr neetn!Ti aai eyitrsig")
 ```
 _______________________________________________________________________________________________________________________________________
+
+## Camel Casing 
+```Python3
+import re
+
+def to_camel_case(text):
+    temp = re.split('-|, |_', text)
+    final = []
+    for each in range(len(temp)):
+        if each == 0:
+            final.append(temp[0])
+        else:
+            upperize = temp[each].capitalize()
+            final.append(upperize)
+    return ''.join(final)
+```
+## Camel Casing: Tests
+```Python3
+test.describe("Testing function to_camel_case")
+test.it("Basic tests")
+test.assert_equals(to_camel_case(''), '', "An empty string was provided but not returned")
+test.assert_equals(to_camel_case("the_stealth_warrior"), "theStealthWarrior", "to_camel_case('the_stealth_warrior') did not return correct value")
+test.assert_equals(to_camel_case("The-Stealth-Warrior"), "TheStealthWarrior", "to_camel_case('The-Stealth-Warrior') did not return correct value")
+test.assert_equals(to_camel_case("A-B-C"), "ABC", "to_camel_case('A-B-C') did not return correct value")
+test.assert_equals(to_camel_case('jon-of-the_Snow'), 'jonOfTheSnow', "You know nothing")
+test.assert_equals(to_camel_case('Hod-o-r'), 'HodOR', "Hold the door")
+```
+_______________________________________________________________________________________________________________________________________
+
 ## Highest Scoring Word
 ```Python3
     """
